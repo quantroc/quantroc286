@@ -20,7 +20,7 @@ describe("QuanToken contract", function () {
   // You can nest describe calls to create subsections.
   describe("Deployment", function () {
 
-    it("Should assign the total supply of tokens to the owner", async function () {
+    it("Check balance of owner = total supply", async function () {
       const ownerBalance = await hardhatToken.balanceOf(owner.address);
       expect(await hardhatToken.totalSupply()).to.equal(ownerBalance);
     });
